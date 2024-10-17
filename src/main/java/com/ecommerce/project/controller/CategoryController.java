@@ -31,6 +31,12 @@ public class CategoryController {
         return "Category created successfully";
     }
 
+    @DeleteMapping("/admin/categories/{categoryId}")
+    public String deleteCategory(@PathVariable long categoryId) {
+        String status = categoryService.deleteCategory(categoryId);
+        return status;
+    }
+
 
 
 
